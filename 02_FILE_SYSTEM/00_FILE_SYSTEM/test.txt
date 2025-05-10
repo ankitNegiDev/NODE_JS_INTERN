@@ -1,0 +1,2 @@
+hello writing data in file text.txt
+10

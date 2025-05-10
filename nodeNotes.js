@@ -1,0 +1,100 @@
+// node notes..
+/**
+ * browser have two engine -> layout and js engine..
+ * node is not a library or framework
+ */
+
+// usecase of node js
+/**
+ * running js outside browser env
+ * creation of server
+ * to creaate cli
+ * to create native application (desktop application)
+ */
+
+// npm
+/**
+ ** cpm -> central package manager ...
+ */
+
+//todo => diff b/w browser and node
+/**
+ * name of gloabl obj in broser is windo and in node iti s  global object
+ * browser dose not have access to file system , where as node js have file system access.
+ * browser have dom realted apis (document) where as node does not have dom apis.
+ */
+
+// for a node project...
+/**
+ * npm init -y --- package.json.
+ */
+
+
+// type= commanjs for comman js moduling .... don't wana set type= module for es6 moduling then use .mjs (to get es6)
+// in require file extension are not required..
+// require like this const fs=require('fs') then these are part of node or either externally installed..
+// but requrie like this const f=require('./index') -> this means we are requring the file..
+
+
+
+// if key are value and same then we can ommit the key...
+
+
+// ------------------------------ DAY-2----------------------------------------
+
+// file system..
+/*
+* any file and folder that is inside our system and we are able to do read , update , write (crud part)
+in file system we have data redundency... which causes various problem like (security , incorrect data problem ,replication of data and so on..)
+just becoz of this we have something called databases.
+*/
+
+// Databases ...
+/**
+ * (1) 
+ */
+
+// CRUD in file system...
+/**
+ * initialize file system...
+ * we can directly use fs (no need to install) and we can start crud operation on file..
+ */
+
+// steps ----
+
+/**
+ ** (1) requirese file system..
+ */
+
+//  writeFileSync ---> overwrite the data ....
+// readFileSync ---
+//
+
+
+
+// ARTICTURE OF NODE.JS
+/**
+ ** client server articture...
+
+ * when a request comes to a server then it goes to the event queue... these operation can be of only two type .. (1) blocking operatioin , (2) non-blocking operaton..
+ * all the request which are in event queue these request will be checked by event loop ....
+ * all blocking operation are sync in nature..
+ * all non-blocking operation are async in nature...
+ * if request is async in nature then we will get output on spot ( Async requests return immediately, but the actual output comes via a callback/promise/event, not “on the spot.)....where as ..
+ * if request is sync in nature then that blocking request will go into the thread pool(main thread) only if worker thread is present ... and once task is done by wroker thread then response is returned..
+ ** by default we have 4 worker threads...
+ * if all worker thread are busy and we have another blocking request then our application will be slow and it show reload or buffer...
+ ** we can increae these thread it depend on ---- cpu
+ * this is how we can do ...
+    const os = require('os');
+    console.log("core length : ",os.cpus().length);
+ */
+
+//  all the function with sync are blocking in nature ...
+
+
+// http
+/**
+ ** it stand for http -> hypter text transfer protocol... we have lot of protocols...like http, https, web-socket..
+ * once we require http that return a object and it have multiple function and one of them is http.createServer() that accept a callback function..and this callback function is called request listener.
+ */
