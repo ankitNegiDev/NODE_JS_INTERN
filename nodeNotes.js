@@ -96,5 +96,62 @@ just becoz of this we have something called databases.
 // http
 /**
  ** it stand for http -> hypter text transfer protocol... we have lot of protocols...like http, https, web-socket..
- * once we require http that return a object and it have multiple function and one of them is http.createServer() that accept a callback function..and this callback function is called request listener.
+ * once we require http that return a object and it have multiple function and one of them is http.createServer() that accept a callback function..and this callback function is called request listener
+ ** if we want our server automatically saved the update then we have a package called nodemon.
+ * to install it just do `npm i nodemon`
+ */
+
+// for local installation of node mon ->
+/**
+ * npm install --save-dev nodemon
+ * npx nodemon index.js
+ */
+
+// request object 
+/**
+ * request is object and inside it there are multiple object... like body , header and so on...
+ ** (1) body
+ ** (2) headers
+    * extra info like about cookies..
+ ** (3) query
+    * http://localhost:3000/?name="ankit"
+ ** (4) params
+    * http://localhost:3000/ankit <- params.
+ */
+
+// Request Object Structure in Express.js
+
+/**
+ * The `request` object in Express contains important info about the incoming HTTP request:
+ * 
+ * (1) req.body
+ *     - Contains data sent in the body of the request (usually in POST/PUT)
+ *     - Requires body-parsing middleware like `express.json()` or `express.urlencoded()`
+ * 
+ * (2) req.headers
+ *     - Contains metadata like content types, authentication tokens, cookies, etc.
+ *     - Example: req.headers['authorization']
+ * 
+ * (3) req.query
+ *     - Contains query string parameters (after `?` in URL)
+ *     - Example URL: http://localhost:3000/?name=ankit
+ *     - Access: req.query.name
+ * 
+ * (4) req.params
+ *     - Contains route parameters defined in the URL path
+ *     - Example route: /user/:username → URL: /user/ankit
+ *     - Access: req.params.username
+ */
+
+// url -> 
+/**
+ * http:// <- protocol
+ * localhost:300 <- domain.
+ * /ankit <- path or parms
+ * ?name="ankit" <- query
+ */
+
+// what is domain...
+/**
+ * localhost:3000 , ip address of any web-site...
  */
