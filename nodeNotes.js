@@ -96,6 +96,7 @@ just becoz of this we have something called databases.
 // http
 /**
  ** it stand for http -> hypter text transfer protocol... we have lot of protocols...like http, https, web-socket..
+ * protocol means a way of communication..
  * once we require http that return a object and it have multiple function and one of them is http.createServer() that accept a callback function..and this callback function is called request listener
  ** if we want our server automatically saved the update then we have a package called nodemon.
  * to install it just do `npm i nodemon`
@@ -107,7 +108,7 @@ just becoz of this we have something called databases.
  * npx nodemon index.js
  */
 
-// request object 
+// request object
 /**
  * request is object and inside it there are multiple object... like body , header and so on...
  ** (1) body
@@ -143,7 +144,7 @@ just becoz of this we have something called databases.
  *     - Access: req.params.username
  */
 
-// url -> 
+// url ->
 /**
  * http:// <- protocol
  * localhost:300 <- domain.
@@ -155,3 +156,55 @@ just becoz of this we have something called databases.
 /**
  * localhost:3000 , ip address of any web-site...
  */
+
+
+// ------------- day 3   HTTP Methods-----------------
+
+/**
+ ** (1). get-> to get data
+ ** (2). post -> sending data or submiting the data or changing on server..
+ ** (3) put -> for complete updation
+ ** (4) patch -> for partial updation..
+ ** (5) delete -> to delete something or remove something...
+ */
+
+//  by default our browser hit -> get request
+// in form we can send only get and post request..
+
+// Expressor server ...
+/**
+ * express is a framework for node.js not of node.js
+ * express is a framework which is used to create server and behind the secne it uses the http and it has very good compatibility with node.js.
+ * then we create express server...
+ * best pratics is return ..... before res.send
+ * when ever we hit post request then data sent by post request will be present in request.body...
+ */
+
+// home , about , profile
+
+
+
+// restfull api..
+/**
+ * rest stand for -> reperesntation state transfer
+ * it is a articture or simply a way of writing code..
+ */
+
+// ** rest api -.. means some exanchange of data will hapening..
+// ** restful routing..means some page creation will be hapening..
+
+
+/**
+📝 Blog Routes and Their HTTP Methods
+
+Route Name	URL	        HTTP Verb	      Description
+Index	   /blogs	        GET	            Display a list of all blogs
+New	      /blogs/new        GET	            Show form to make new blogs
+Create	  /blogs	        POST	        Add new blog to database, then redirect
+Show	 /blogs/:id	        GET	            Show info about one blog
+Edit	  /blogs/:id/edit	GET	            Show edit form of one blog
+Update	/blogs/:id	        PUT	            Update a particular blog, then redirect
+Destroy	/blogs/:id	        DELETE	        Delete a particular blog, then redirect
+ */
+
+//  by seeeing method , path -> we understand the task uing rest full api..
