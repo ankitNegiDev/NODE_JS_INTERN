@@ -208,3 +208,92 @@ Destroy	/blogs/:id	        DELETE	        Delete a particular blog, then redirec
  */
 
 //  by seeeing method , path -> we understand the task uing rest full api..
+
+
+
+// ----------------------DAY 4---------------------------
+
+
+// middle ware 
+/**
+ * a middleman b/w client and server.
+ * it is a function and runs in b/w two things.. not always b/w client and server.
+ * it always runs on every incoming request irrespecitve of path and methods. koi bhii path ho koi bhii request ho.. 
+ * midddle ware is middle man b/w req and response. like isp is middle man b/w client(we) and server (jio)
+ * middleware can be any no..
+ * any middleware can stop the request and return a responsoe of no..
+ ** sending response inside the middle ware is big no...
+ * we can add papth to restrict a middle ware to run on a particualr path for every method/request.
+ */
+
+// syntax of middle ware..
+/**
+ * middleware are also normal function ... and these function have access of three things 1 request object, response object and next function or next middleware.
+ * eg => const varify = (req,res,next,error)=>{}
+ */
+
+// types of middleware ..
+/**
+ ** (1) userdefined...
+ ** (2) predefined.. or prebuilt.
+ */
+
+//  url
+/**
+ * url -> req.params -> for path parameter. /:
+ * req.query -> to get query ... ? key=value
+ * req.body ->
+ * by default request body is undefined...either we sent data or not .. but to see the data we use a pre-built middle ware which is express.json..
+ * if we are using pre-built middleware then it is of like app.use(express.json);
+ */
+
+
+// Data base -------------
+
+// sql
+/**
+ * relational , table format
+ * the sql databases that uses sql langaue are called sql databases.
+ * sql databases are called schemafull database.
+ */
+
+// no-sql
+/**
+ * non-relation , document format.
+ * the databases that does not use sql language are called non-sql databases.
+ * no squal is called schemaless databases.
+ * inside the db there can be multiple collections and inside collection there can be multipe document.
+ * multiple document form  one collections
+ */
+
+// mongodb.
+/**
+ * data stored in mongodb database in document in the form of json.
+ */
+
+// db commands
+/**
+ * show dbs  == > to see all the dbs..
+ * use databaseName => to use that database. and to create a database with that name if it does not exist.
+ * show collections => to see all the collections
+ * db.createCollections('name of collection')
+ * db.collectionName.drop()
+ *! db.dropDatabase() 
+ */
+
+//  crud on mongodb..
+
+/**
+ * db.use -> 
+ * db.createCollection()
+ * show collections
+ * db.collectionName.insertOne({key:"value",key:"vlaue",})
+ * db.collectionName.insertMany({key:"value1",key:"value"},{key:"vlaue1",key:"value2"},{key:"vlaue",key:"value"})
+ * db.collectionName.find() = to get all documents of a collection
+ ** update ...
+ * db.collectionName.updateOne({key:"vlaue"}(on what basis we want to change),{$set:{key:"value",key:"value"}}(new value))
+ ** delete...
+ * db.collectionName.deleteOne({key:"value"})
+ */
+
+//  all db-method return a promise ..
