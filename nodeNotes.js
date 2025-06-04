@@ -1,3 +1,48 @@
+// node
+/**
+ * node js is single thread having event loop , and event driven programming language...
+ * node js by default is async nature 
+
+ ** thread
+    * thread is a smallest unit of execution in a process.
+    * a small unit of execution -- its like a worker.
+
+ ** process
+    * In computing, a process is an instance of a computer program that is currently being executed
+
+ ** threadpool
+
+    * it is just a library written in c++ -- libhubvii -- and it will decide which worker will do which work.
+*/
+
+// if node js is single threaded then how node js handel the task concourency
+/**
+ * by using 
+ */
+
+// what is module
+/**
+ * Consider modules to be the same as JavaScript libraries. A set of functions you want to include in your application.
+ * module is nothing but a code that is written by someone else or by us..
+ * we have multiple module like core module , local module , thridparty module , ecma script module (import export), and then comman js module and last one is global module.
+
+  ** core module -- 
+    * core module is nothing but the builtin module that comes with nodejs. like fs module , http module , os , buffer.
+
+  ** local module --
+
+    * local module is nothing but a user defined module like we create a function in a file and then export it and whenever wherever it is needed we import it.
+
+  ** thrid party module --
+    * developed by other devloper  like mongoose , express , axios
+
+  ** es6 module --
+    * import export
+
+  ** global module --
+    * when we install globallaly. like nodemon -- or etc.
+ */
+
 // node notes..
 /**
  * browser have two engine -> layout and js engine..
@@ -186,7 +231,7 @@ just becoz of this we have something called databases.
 
 // restfull api..
 /**
- * rest stand for -> reperesntation state transfer
+ * rest stand for -> reperesntational state transfer
  * it is a articture or simply a way of writing code..
  */
 
@@ -234,6 +279,7 @@ Destroy	/blogs/:id	        DELETE	        Delete a particular blog, then redirec
 
 // types of middleware ..
 /**
+ *todo => app level (its for globallly) , and router level  (its only for route on which we use)
  ** (1) userdefined...
  ** (2) predefined.. or prebuilt.
  */
@@ -297,3 +343,41 @@ Destroy	/blogs/:id	        DELETE	        Delete a particular blog, then redirec
  */
 
 //  all db-method return a promise ..
+
+
+
+// ------------ day 5-------------
+
+/**
+ * mongoose.connect('mongodb://127.0.0.1:27017/test'); connect method retun a promise ...
+ * to create a collection.........by using model and to create model we need schema..
+ * so on basis of scema we will create model.
+ * shcema is a blue print of how the collection will look.
+ */
+
+
+// mvc -> modal view controller
+/**
+ * modal is collection in vs code..
+ * controllers are the logical part - authencation , 
+ * routes -> path.. we create it befor the controller.
+ * index.js -> middleware -> routes -> controller -> modal -> finial updates db.
+ */
+
+// not to send on production or github
+/**
+ * package-lock.json and node modules.
+ */
+
+// modal is a js class so to make it good habit we make it Comment.modal.js
+
+// folder structure 
+/**
+ * modal -> it contains schema diffeent - differnet one.
+ * 
+ */
+
+// mongoose.model("collection name",schema)
+
+
+//
